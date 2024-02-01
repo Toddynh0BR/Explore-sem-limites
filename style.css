@@ -1,0 +1,307 @@
+/*estrutura-basica*/
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+ font-size: 62.5%;
+ --color-base-purple: #B52184;
+ --color-base-blue: #312D64;
+ --color-base-white: #ffffff;
+ --color-base-gradiant:  linear-gradient(96deg, #343193 0%, #302C63 100%);
+}
+/*estrutura-basica-end*/
+
+
+
+/*scrollbar*/
+::-webkit-scrollbar {
+ width: .8rem;
+}
+::-webkit-scrollbar-track {
+ background-color: var(--color-base-white);
+}
+::-webkit-scrollbar-thumb {
+ background-color: var(--color-base-blue);
+ border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+ background-color: var(--color-base-purple);
+}
+/*scrollbar-end*/
+
+
+
+/*Header*/
+header {
+ height: 100vh;
+ background-color: var(--color-base-white);
+}
+
+.box1 {
+ display: flex;
+ flex-direction: row-reverse;
+}
+
+.buttonOne {
+ margin-top: 15rem;
+ transition: filter 0.3s;
+}
+
+.buttonOne:hover {
+ filter: grayscale(11%);
+}
+
+.tittle {
+ margin-top: 25rem;
+}
+
+.astro {
+ height: 100vh;
+ width: 71rem;
+}
+
+h1 {
+ font-size: 6rem;
+ font-family: 'Mulish', sans-serif;
+ font-weight: 900;
+ color: var(--color-base-purple);
+}
+
+h2 {
+ font-size: 3rem;
+ font-family: 'Mulish', sans-serif;
+ font-weight: 600;
+ color: var(--color-base-blue);
+}
+
+@media(max-width: 1024px){
+.box1 {
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.astro {
+ width: 37rem;
+ height: 41rem;
+ margin: auto;
+}
+
+.buttonOne {
+ margin-top: 4rem;
+ margin-left: 12.5rem;
+}
+
+.tittle {
+ margin: auto;
+ margin-top: 0;
+}
+
+h1 {
+ font-size: 3.2rem;
+}
+h2 {
+ font-size: 2rem;
+}
+}
+/*header-end*/
+
+
+
+
+/*main*/
+main {
+ height: 57rem;
+ background: linear-gradient(96deg, #343193 0%, #302C63 100%);
+ margin-top: 8rem;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 6rem;
+}
+
+.boxes {
+ width: 36.6rem;
+ height: 46rem;
+ background-color: white;
+ border-radius: 2.4rem;
+ padding: 3.2rem;
+}
+
+h3 {
+ font-size: 3.5rem;
+ font-family: 'Mulish', sans-serif;
+ color: var(--color-base-purple);
+ font-weight: 900;
+ margin-top: 3rem;
+}
+
+h4 {
+ font-size: 2rem;
+ font-family: 'Mulish', sans-serif;
+ font-weight: 600;
+ color: var(--color-base-blue);
+}
+
+.planet {
+ width: 9.7rem;
+ height: 9.7rem;
+}
+
+@media(max-width: 1024px){
+main {
+ flex-direction: column;
+ gap: 5rem;
+ height: 124rem;
+}
+
+.boxes {
+ width: 35rem;
+ height: 34rem;
+ border-radius: 2rem;
+ padding: 2.6rem;
+}
+
+h3 {
+ font-size: 3rem;
+ margin-top: 3.3rem;
+}
+h4 {
+ font-size: 1.6rem;
+}
+}
+/*main-end*/
+
+
+
+/*section*/
+section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.stars {
+ width: 64rem;
+ height: 100%;
+}
+
+.formulario {
+ height: 42.2rem;
+ width: 59.5rem;
+ margin-left: 8rem;
+ display: flex;
+ flex-direction: column;
+
+}
+
+button {
+ padding: 1.6rem;
+ background-color: var(--color-base-blue);
+ color: var(--color-base-white);
+ width: 15rem;
+ border: 0;
+ border-radius: 1.6rem;
+ cursor: pointer;
+ transition: .6s;
+}
+
+button:hover {
+filter: grayscale(40%);
+}
+
+h5 {
+ color: var(--color-base-purple);
+ font-size: 4rem;
+ font-family: 'Mulish', sans-serif;
+ font-weight: 900;
+}
+
+fieldset {
+ border: none;
+}
+
+input {
+border: 1.5px solid var(--color-base-blue);
+padding: 1.2rem 1.6rem;
+padding-left: 5rem;
+width: 100%;
+height: 5rem;
+border-radius: 1.6rem;
+font-size: 1.6rem;
+font-family: 'Mulish', sans-serif;
+color: var(--color-base-blue);
+font-weight: 600;
+}
+
+.message {
+padding-top: 2.5rem;
+ padding-bottom: 10rem;
+ padding-left: 1.6rem;
+ margin-top: 2.8rem;
+ margin-bottom: 2.8rem;
+}
+
+.person {
+ height: 2.5rem;
+ width: 2.4rem;
+ z-index: 2;
+ position: relative;
+ left: 1.4rem;
+ top: 3.9rem;
+}
+
+.email-icon {
+ height: 2.5rem;
+ width: 2.4rem;
+ z-index: 2;
+ position: relative;
+ left: 1.4rem;
+ top: 3.9rem;
+}
+@media (max-width: 1024px){
+ .stars {
+ width: 0;
+ height: 0;
+ }
+
+ section {
+ justify-content: center;
+ height: 55rem;
+ padding-bottom: 7rem;
+ }
+
+ .formulario {
+ width: 35rem;
+ margin-top: 5rem;
+ margin-bottom: 10rem;
+ margin: auto;
+ }
+}
+/*section-end*/
+
+
+
+/*footer*/
+footer {
+ background: linear-gradient(96deg, #343193 0%, #302C63 100%);
+ height: 8rem;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+p {
+ color: var(--color-base-white);
+ font-size: 2rem;
+ font-family: 'Mulish', sans-serif;
+ font-weight: 500;
+}
+/*footer-end*/
+
